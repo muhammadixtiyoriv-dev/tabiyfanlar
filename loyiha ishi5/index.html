@@ -1,0 +1,321 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#082b21">
+  <meta name="description" content="6-B sinf ekologiya loyihasi. Tabiatni asraylik!">
+  <title>6-B sinf | Eco Quest</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <a href="#home" class="logo">
+      <span class="logo-icon">🌎</span>
+      <span>
+        <strong>6-B <span>sinf</span></strong>
+        <small>ECO PROJECT</small>
+      </span>
+    </a>
+
+    <nav>
+      <ul>
+        <li><a href="#home" class="nav-link">Bosh sahifa</a></li>
+        <li><a href="#game" class="nav-game">🎮 O‘yin</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1800&q=85"
+        alt="Yashil tabiat va tog‘lar"
+      >
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content container">
+        <div class="hero-text">
+          <span class="eyebrow"><span class="live-dot"></span> 01 / TABIAT</span>
+
+          <h1>Birgalikda<br><span>tabiatni asraylik!</span></h1>
+
+          <p>
+            Ekologiya — tabiat va tirik mavjudotlar o‘rtasidagi
+            munosabatlarni o‘rganuvchi fan. Kelajagimiz bugungi
+            harakatlarimizga bog‘liq.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="#game" class="btn btn-green">🎮 O‘yinni boshlash →</a>
+            <a href="#facts" class="btn btn-glass">Ma’lumotlarni o‘qish</a>
+          </div>
+
+          <div class="hero-tags">
+            <span>🌱 Tabiatni asra</span>
+            <span>💧 Suvni tejа</span>
+            <span>♻️ Qayta foydalan</span>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img
+            src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=85"
+            alt="Yashil o‘rmon"
+          >
+          <span class="green-label">BIZNING SAYYORAMIZ</span>
+          <h2>Kichik qadamlar — katta o‘zgarishlar.</h2>
+          <div class="progress-decoration"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHORT ECO CARDS -->
+    <section class="quick-facts container">
+      <article class="quick-card">
+        <div class="quick-icon">🌿</div>
+        <div>
+          <h3>Tabiatni sev</h3>
+          <p>Har bir tirik mavjudot muhim.</p>
+        </div>
+      </article>
+
+      <article class="quick-card">
+        <div class="quick-icon">💧</div>
+        <div>
+          <h3>Suvni asra</h3>
+          <p>Suvdan oqilona foydalan.</p>
+        </div>
+      </article>
+
+      <article class="quick-card">
+        <div class="quick-icon">♻️</div>
+        <div>
+          <h3>Chiqindini kamaytir</h3>
+          <p>Qayta foydalanishga odatlan.</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- GAME -->
+    <section class="section container" id="game">
+      <div class="section-heading">
+        <div>
+          <span class="section-label">BILIMINGNI SINAB KO‘R</span>
+          <h2>🌍 Ekologiya Quest</h2>
+          <p>Savollarga javob ber, ball to‘pla va tabiat bilimdoniga aylan!</p>
+        </div>
+
+        <div class="max-score">
+          <small>MAKSIMAL BALL</small>
+          <strong>50 XP</strong>
+        </div>
+      </div>
+
+      <div class="game-layout">
+        <div class="game-promo">
+          <img
+            src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1000&q=85"
+            alt="Tabiat manzarasi"
+          >
+          <div class="promo-overlay"></div>
+          <div class="promo-content">
+            <span class="promo-badge">🏆 ECO CHALLENGE</span>
+            <div class="earth-emoji">🌎</div>
+            <h3>Sayyora seni kutmoqda!</h3>
+            <p>Har bir to‘g‘ri javob — tabiat haqida yangi bilim.</p>
+          </div>
+        </div>
+
+        <div class="quiz-card">
+          <div id="quiz-start">
+            <span class="pill">5 ta savol · Har biri 10 ball</span>
+            <h3>O‘yinga tayyormisan?</h3>
+            <p>
+              Ekologiya, toza suv, chiqindilar va Orol dengizi haqidagi
+              savollarga javob ber. Natijangni oxirida bilib olasan!
+            </p>
+            <button class="btn btn-dark" id="start-game">O‘yinni boshlash →</button>
+          </div>
+
+          <div id="quiz-play" hidden>
+            <div class="quiz-top">
+              <span class="pill" id="question-count">Savol 1 / 5</span>
+              <strong>⭐ <span id="score">0</span> XP</strong>
+            </div>
+
+            <div class="quiz-progress">
+              <span id="quiz-progress-bar"></span>
+            </div>
+
+            <h3 id="question-text"></h3>
+            <div id="answer-options" class="answer-options"></div>
+            <div id="answer-feedback" class="feedback" hidden></div>
+            <button id="next-question" class="btn btn-dark next-button" hidden>
+              Keyingi savol →
+            </button>
+          </div>
+
+          <div id="quiz-result" hidden>
+            <div class="result-emoji" id="result-emoji">🏆</div>
+            <h3 id="result-title">Ajoyib natija!</h3>
+            <p class="result-score">
+              Natijang: <strong id="final-score">0 / 50 XP</strong>
+            </p>
+            <p id="result-message"></p>
+            <button id="restart-game" class="btn btn-dark">↻ Qayta o‘ynash</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ECOLOGY INFORMATION -->
+    <section class="info-section" id="facts">
+      <div class="container">
+        <div class="center-heading">
+          <span class="section-label">BILIM — KELAJAK KALITI</span>
+          <h2>Ekologiya haqida</h2>
+          <p>
+            Ekologiya tirik organizmlar, inson va atrof-muhit o‘rtasidagi
+            bog‘liqlikni o‘rganadi. Tabiat muvozanatini asrash hayot uchun muhim.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card">
+            <div class="info-icon">🌳</div>
+            <span>01 / ECO</span>
+            <h3>O‘rmonlar</h3>
+            <p>O‘rmonlar ko‘plab hayvon va o‘simliklar uchun yashash muhitidir.</p>
+          </article>
+
+          <article class="info-card">
+            <div class="info-icon">💧</div>
+            <span>02 / ECO</span>
+            <h3>Toza suv</h3>
+            <p>Suvni tejash va manbalarni ifloslantirmaslik barchamiz uchun muhim.</p>
+          </article>
+
+          <article class="info-card">
+            <div class="info-icon">♻️</div>
+            <span>03 / ECO</span>
+            <h3>Chiqindilar</h3>
+            <p>Chiqindilarni saralash ayrim materiallarni qayta ishlashga yordam beradi.</p>
+          </article>
+        </div>
+
+        <!-- ARAL SEA -->
+        <article class="aral-card">
+          <div class="aral-image">
+            <img
+              src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=85"
+              alt="Quruq tabiiy landshaft"
+            >
+            <span>🌍 Haqiqiy ekologik muammo</span>
+          </div>
+
+          <div class="aral-content">
+            <span class="section-label">O‘ZBEKISTON VA MARKAZIY OSIYO</span>
+            <h2>Orol dengizi fojiasi</h2>
+            <p>
+              1960-yillardan boshlab Amudaryo va Sirdaryo suvlarining katta
+              qismi sug‘orishga yo‘naltirildi. Natijada Orol dengizi keskin
+              qisqardi, baliqchilik zarar ko‘rdi va dengiz tubining katta qismi
+              quruq hududga aylandi.
+            </p>
+            <p>
+              Quruq dengiz tubidan ko‘tariladigan tuz va chang atrof-muhitga
+              ta’sir qiladi. Bu voqea suv resurslaridan oqilona foydalanish
+              naqadar muhimligini ko‘rsatadi.
+            </p>
+
+            <div class="interesting-fact">
+              <strong>💡 Qiziqarli voqea</strong>
+              <p>
+                2005-yilda Qozog‘istonda Ko‘karal to‘g‘oni qurildi. U Shimoliy
+                Orol dengizida suvni saqlashga yordam berib, ayrim hududlarda
+                baliqchilikning tiklanishiga hissa qo‘shdi.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CAROUSEL -->
+    <section class="section container" id="gallery">
+      <div class="section-heading gallery-heading">
+        <div>
+          <span class="section-label">TABIAT GALEREYASI</span>
+          <h2>Sayyoramiz go‘zalligi 🌿</h2>
+        </div>
+
+        <div class="carousel-controls">
+          <button id="prev-slide" aria-label="Oldingi rasm">←</button>
+          <button id="next-slide" aria-label="Keyingi rasm">→</button>
+        </div>
+      </div>
+
+      <div class="carousel">
+        <img id="carousel-image"
+          src="https://images.unsplash.com/photo-1472396961693-142e6e269027?auto=format&fit=crop&w=1400&q=85"
+          alt="Tabiat manzarasi"
+        >
+        <div class="carousel-overlay"></div>
+        <div class="carousel-caption">
+          <span id="carousel-tag">01 / TABIAT</span>
+          <h3 id="carousel-title">Tabiat — bizning boyligimiz</h3>
+          <p id="carousel-text">
+            Har bir daraxt, daryo va tirik mavjudot sayyoramiz uchun muhim.
+          </p>
+        </div>
+      </div>
+
+      <div id="carousel-dots" class="carousel-dots"></div>
+      <div id="carousel-thumbnails" class="thumbnail-grid"></div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="container cta-section">
+      <div class="cta-card">
+        <div>
+          <span>BIZDAN BOSHLANADI</span>
+          <h2>Tabiatga mehr — kelajakka mehr.</h2>
+          <p>
+            Bugun bitta foydali ish qil: suvni tejа, chiqindini sarala
+            yoki daraxt ekishga yordam ber.
+          </p>
+        </div>
+        <a href="#game" class="btn btn-dark">O‘yinga qaytish ↑</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <a href="#home" class="logo footer-logo">
+        <span class="logo-icon">🌎</span>
+        <span>
+          <strong>6-B sinf</strong>
+          <small>EKOLOGIYA LOYIHASI</small>
+        </span>
+      </a>
+
+      <p>Tabiatni asrash — barchamizning vazifamiz. 🌱</p>
+      <a href="#home" class="back-top">Tepaga ↑</a>
+    </div>
+  </footer>
+
+</body>
+</html>
